@@ -14,13 +14,22 @@ Para acessar o projeto é necessário possuir o Visual Studio instalado na máqu
 Agora para executar o projeto basta selecionar a tecla F5, ou Depurar -> Iniciar depuração ou no botão de play verde escrito IIS Express.
 
 Ao ser executado, será aberto uma guia no navegador. Essa página possui três tópicos: Produtos, Usuários e Schemas. 
+
 Nos schemas possuem dados das tabelas de banco de dados, onde mostra os dados, tipos e restrições dos produtos e usuários.
 
 Nos tópicos de produtos e usuários possuem cinco possíveis ações: get, post get por id, put e delete.
 Para executar funcionalidades, é necessário selecionar um tipo e clicar em "Try it out (experimente)". 
+
 Se o selecionado for get, basta clicar em "execute" e será mostrado todos os tipos de dados armazenados no banco de dados.
+
 Se o selecionado for post, é preciso digitar o respectivo dado que deseja ser acrescentado e clicando em "execute" será acrescentado ao banco. Caso digite alguma informação incorreta será repassado um erro. Cuidado nos campos que recebem strings, pois caso não seja escrito o que deseja será repassado o próprio nome "string", pois ele identifica que já é a string desejada e caso não tenha nada escrito entre as aspas será retornado um erro.
-Se o selecionado for get {id}, será necessário repassar um id, clicando em "execute" será retornado as informações do id selecionado.
+
+Se o selecionado for get {id}, será necessário repassar um id, clicando em "execute" será retornado as informações do id selecionado. Caso seja escolhido um id que não existe, retornará um erro.
+
+Se o selecionado for put {id}, será necessário repassar um id, passe todas as informações, alterando o que deseja mudar. Cuidado para não ser repassado o nome "string". Ao finalizar clique em "execute" e será alterado no banco de dados.
+
+Se o selecionado for delete {id}, digite o id que deseja excluir, ao clicar em "execute", será excluído do banco de dados. Caso seja escolhido um id que não existe, retornará um erro.
+
 
 
 No projeto consegui executar as funcionalidades básicas, get, get por id, post, put e delete das tabelas produtos e usuários. Em relação as validações, consegui colocar quase todas, as que faltaram foram as que avaliam se o email é válido e se o email é único no banco e a senha ser criptografada. Também faltou a documentação do projeto , a implementação de rota autenticada, a implementação do retorno de um JWT no login e impedir acesso a uma rota a requisições sem JWT.
